@@ -5,7 +5,11 @@ import config from 'ember-sentry-performance-example/config/environment';
 
 import * as Sentry from '@sentry/ember';
 
-Sentry.InitSentryForEmber();
+Sentry.InitSentryForEmber({
+  beforeSend() {
+    console.log('Before send sent.');
+  },
+});
 export default class App extends Application {
   modulePrefix = config.modulePrefix;
   podModulePrefix = config.podModulePrefix;
