@@ -23,17 +23,6 @@ module.exports = function (environment) {
     },
   };
 
-  ENV['@sentry/ember'] = {
-    sentry: {
-      dsn: 'https://9a144ade627748309afe5ec5c1290f84@o408219.ingest.sentry.io/5776415',
-
-      // Set tracesSampleRate to 1.0 to capture 100%
-      // of transactions for performance monitoring.
-      // We recommend adjusting this value in production
-      tracesSampleRate: 1.0,
-    },
-  };
-
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
